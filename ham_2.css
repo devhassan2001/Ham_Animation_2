@@ -1,0 +1,63 @@
+:root{
+    --bars-height: 3.4px;
+    --transition: all 0.5s ease-in-out;
+}
+
+#ham_2 {
+    width: 26px;
+    height: 17px;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainBar {
+    width: 100%;
+    height: var(--bars-height);
+    position: relative;
+    background: var(--mainBar-backgroundColor);
+    transition: var(--transition);
+}
+
+.mainBar::before, .mainBar::after {
+    content: "";
+    width: 100%;
+    height: var(--bars-height);
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: var(--pseudo-backgroundColor);
+    transition: var(--transition);
+}
+.mainBar::before {
+    transform: translateY(-7px);
+}
+.mainBar::after {
+    transform: translateY(7px);
+}
+
+/* start animation classes */
+#ham_2.backDisapear .mainBar {
+    transform: translateX(-26px);
+    background: transparent;
+}
+#ham_2.backQuckly .mainBar::before {
+    transition: all 0.1s ease-in-out;
+}
+#ham_2.moveAway .mainBar::before {
+    left: 15px;
+    top: -15px;
+}
+#ham_2.setRotate .mainBar::before {
+    transform: rotate(45deg) translate(19px, -19px);    
+}
+#ham_2.setRotate .mainBar::after {
+    transform: rotate(-45deg) translate(19px, 19px);    
+}
+#ham_2.resetPosition .mainBar::before {
+    transform: translate(0px, -7px);    
+}
+#ham_2.resetPosition .mainBar::after {
+    transform: translate(0px, 7px);    
+}
