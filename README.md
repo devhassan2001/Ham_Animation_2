@@ -5,12 +5,12 @@ Threee steps to use it
 
 1. Add this in the head tag
 ```
-<link href="https://devhassan2001.github.io/Ham_Animation_1/ham_2.css" rel="stylesheet">
+<link href="https://devhassan2001.github.io/Ham_Animation_2/ham_2.css" rel="stylesheet">
 ```
 
 2. Add this to the end of the body tag
 ```
-<script src="https://devhassan2001.github.io/Ham_Animation_1/ham_2.js"></script>
+<script src="https://devhassan2001.github.io/Ham_Animation_2/ham_2.js"></script>
 ```
 
 3. Add this to the place you want to set the hamburger icon
